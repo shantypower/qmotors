@@ -1,0 +1,14 @@
+.news {
+    width: 85%;
+    margin: 20px auto 0px auto;
+    background-color: skyblue;
+    padding: 50px 30px 50px 50px;
+}
+
+span.block {
+    display: block;
+}
+
+body {
+    background-color: #ffffff;
+}
