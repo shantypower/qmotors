@@ -1,12 +1,11 @@
-<section class="news">
-    <h2 class="news__title">Новости</h2>
-    <p class="news__text"></p>
-    <ul class="news__list">
-        <?php foreach ($news as $key => $value): ?>
+<ul class="catalog__products-list">
+    <?php foreach ($news as $key => $value): ?>
 
-        <li class="news__item">
-            <a class="news__link" href="news_article.php?key=<?=$key; ?>"><?=preg_replace('/(\d)+(\.|\)|\s)+([\s]?)+(.*)/', '\\4', $value); ?></a>
-        </li>
-        <?php endforeach?>
-    </ul>
-</section>
+    <li class="catalog__products-item product">
+        <a class="news__link" href="news_article.php?key=<?=$key; ?>">
+            <p class="product__name"><?=preg_replace('/(\d)+(\.|\)|\s)+([\s]?)+(.*)/', '\\4', $value); ?></p>
+            <img class="product__image" src="img/nophoto.jpg" alt="Фото товара" width="210" height="209">
+        </a>
+    </li>
+    <?php endforeach?>
+</ul>
