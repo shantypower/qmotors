@@ -29,7 +29,7 @@
     <nav class="main-nav">
       <div class="container">
         <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a href="#">Главная</a></li>
+          <li class="main-nav__list-item"><a href="index.php">Главная</a></li>
           <li class="main-nav__list-item main-nav__list-item--active"><a href="#">Каталог</a></li>
           <li class="main-nav__list-item"><a href="#">Доставка и оплата</a></li>
           <li class="main-nav__list-item"><a href="#">Прайс-лист</a></li>
@@ -48,9 +48,9 @@
   </header>
 
   <main class="catalog container">
-    <h1 class="catalog__title visually-hidden">Раздел каталога - бытовая техника: микроволновки</h1>
+    <h1 class="catalog__title visually-hidden"><?=$title?></h1>
     <ul class="catalog__menu breadcrumbs">
-      <li class="breadcrumbs__item"><a href="#">Главная</a></li>
+      <li class="breadcrumbs__item"><a href="index.php">Главная</a></li>
       <li class="breadcrumbs__item">/</li>
       <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
       <li class="breadcrumbs__item">/</li>
@@ -79,17 +79,8 @@
       <div class="catalog__centerblock">
         <?=$content?>
         <ul class="catalog__company-info features">
-          <li class="features__item">Компания &laquo;Пиксель Плюс&raquo; существует более 6&nbsp;лет, за&nbsp;это время
-            мы&nbsp;принимали участие в&nbsp;разработке более чем 700&nbsp;сайтов, поэтому можем уверенно называть себя
-            профессионалами. На&nbsp;данный момент наш коллектив состоит из&nbsp;более чем 30&nbsp;сотрудников
-            работающих в&nbsp;двух офисах в&nbsp;Москве и&nbsp;Зеленограде.характерные для этого жанра мотивы:
-            неразделённой любви, ухода молодости, угасания души.</li>
-          <li class="features__item">Одним из&nbsp;основных направлений работ нашей компании является поисковое
-            продвижение сайтов, на&nbsp;данной момент мы&nbsp;работаем с&nbsp;более чем 150 постоянными клиентами
-            по&nbsp;более чем 11&nbsp;000 поисковым запросам. При этом в&nbsp;работе основной акцент мы&nbsp;делаем
-            на&nbsp;качестве работ, а&nbsp;так&nbsp;же применяем собственные уникальные разработки в&nbsp;области SEO
-            продвижения. На&nbsp;данный момент отдел SEO состоит из&nbsp;9&nbsp;человек под руководством ведущего
-            специалиста, преимущественно работающих в&nbsp;нашем московском офисе.</li>
+          <li class="features__item">Техцентр &laquo;Кволити Моторс&raquo; работает в&nbsp;сфере сервисных услуг в&nbsp;Москве с&nbsp;2001 года. Основные направления деятельности компании&nbsp;&mdash; это техническое обслуживание, ремонт и&nbsp;продажа запасных частей для американских и&nbsp;европейских автомобилей. Одним из&nbsp;ключевых принципов работы компании является достижение намеченных целей и&nbsp;выполнение индивидуальных пожеланий наших клиентов в&nbsp;полном объёме, начиная с&nbsp;мойки автомобиля и&nbsp;до&nbsp;проведения самого сложного кузовного ремонта.</li>
+          <li class="features__item">Если у&nbsp;Вас возникли <nobr>какие-либо</nobr> технические проблемы с&nbsp;Вашим автомобилем, срочно обращайтесь в&nbsp;наш техцентр в&nbsp;Москве. Мы&nbsp;сможем устранить любую неисправность на&nbsp;самых выгодных условиях и&nbsp;полностью восстановим функциональность транспортного средства. Также у&nbsp;нас Вы&nbsp;всегда можете пройти качественное техническое обслуживание, которое позволит много лет ездить без поломок.</li>
         </ul>
       </div>
     </div>
@@ -102,7 +93,7 @@
       </div>
       <div class="footer__nav">
         <ul class="footer__nav-list">
-          <li class="footer__nav-item"><a href="#">Главная</a></li>
+          <li class="footer__nav-item"><a href="index.php">Главная</a></li>
           <li class="footer__nav-item"><a href="#">Каталог</a></li>
           <li class="footer__nav-item"><a href="#">Доставка и оплата</a></li>
           <li class="footer__nav-item"><a href="#">Прайс-лист</a></li>
