@@ -2,9 +2,11 @@
 require_once ('core/functions.php');
 require_once ('source/docx_reader.php');
 
-$doc = new \docx_reader\Docx_reader();
-$doc->setFile('docs/1.Покраска сколов на автомобиле Land Rover.docx');
 $page_content = '';
+$id = $_GET['key'];
+$doc = new \docx_reader\Docx_reader();
+$source = 'docs/'.$news[$id].'.docx';
+$doc->setFile($source);
 
 if(!$doc->get_errors()) {
     $html = $doc->to_html();
