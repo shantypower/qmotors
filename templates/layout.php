@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="lib/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css" />
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -54,24 +54,22 @@
       <li class="breadcrumbs__item">/</li>
       <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
       <li class="breadcrumbs__item">/</li>
-      <li class="breadcrumbs__item breadcrumbs__item--active"><a>Бытовая техника</a></li>
+      <li class="breadcrumbs__item breadcrumbs__item--active"><a>Покраска</a></li>
     </ul>
     <div class="catalog__blocks content">
       <aside class="catalog__leftblock">
         <ul class="catalog__list">
-          <li class="catalog__list-item"><a href="#">Автомобили</a></li>
-          <li class="catalog__list-item category category--active"><a href="#">Бытовая техника</a>
+          <li class="catalog__list-item"><a href="#">Техобслуживание</a></li>
+          <li class="catalog__list-item category category--active"><a href="#">Услуги</a>
             <ul class="category__list">
-              <li class="category__item category__item--active"><a>Микроволновки</a></li>
-              <li class="category__item"><a href="#">Холодильники</a></li>
-              <li class="category__item"><a href="#">Посудомоечные машины</a></li>
-              <li class="category__item"><a href="#">Чайники</a></li>
+              <li class="category__item category__item--active"><a>Покраска</a></li>
+              <li class="category__item"><a href="#">Детали кузова</a></li>
+              <li class="category__item"><a href="#">Тормозная система</a></li>
+              <li class="category__item"><a href="#">Ходовая часть</a></li>
             </ul>
           </li>
-          <li class="catalog__list-item"><a href="#">Мобильная техника</a></li>
-          <li class="catalog__list-item"><a href="#">Компьютеры</a></li>
-          <li class="catalog__list-item"><a href="#">Одежда</a></li>
-          <li class="catalog__list-item"><a href="#">Недвижимость</a></li>
+          <li class="catalog__list-item"><a href="#">Гарантия</a></li>
+          <li class="catalog__list-item"><a href="#">Диагностика</a></li>
         </ul>
         <div class="catalog__price">
           <a href="" download=""><img src="img/exel.png" alt="логотип MS-Exel" width="97" height="111" title="Скачать прайс-лист"></a>
