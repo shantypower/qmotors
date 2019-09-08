@@ -5,7 +5,7 @@
         <?php foreach ($news as $key => $value): ?>
 
         <li class="news__item">
-            <a class="news__link" href="news_article.php?key=<?=$key; ?>"><?=$value?></a>
+            <a class="news__link" href="news_article.php?key=<?=$key; ?>"><?=preg_replace('/(\d)+(\.|\)|\s)+([\s]?)+(.*)/', '\\4', $value); ?></a>
         </li>
         <?php endforeach?>
     </ul>
