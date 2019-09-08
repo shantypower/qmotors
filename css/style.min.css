@@ -1,42 +1,18 @@
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-
-body,
 html {
-    height: 100%
-}
-
-html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
     font-family: sans-serif;
-    line-height: 1.15
-}
-
-body,
-sub,
-sup {
-    position: relative
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
 }
 
 body {
-    margin: 0;
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: 400;
-    color: #000;
-    background-color: #fff;
-    font-size: 14px;
-    line-height: 22px
+    margin: 0
 }
 
 article,
 aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-main,
-menu,
 nav,
 section {
     display: block
@@ -45,6 +21,12 @@ section {
 h1 {
     font-size: 2em;
     margin: .67em 0
+}
+
+figcaption,
+figure,
+main {
+    display: block
 }
 
 figure {
@@ -57,18 +39,14 @@ hr {
     overflow: visible
 }
 
-code,
-kbd,
-pre,
-samp {
+pre {
     font-family: monospace, monospace;
     font-size: 1em
 }
 
 a {
     background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-    text-decoration: none
+    -webkit-text-decoration-skip: objects
 }
 
 a:active,
@@ -78,12 +56,21 @@ a:hover {
 
 abbr[title] {
     border-bottom: none;
+    text-decoration: underline;
     text-decoration: underline dotted
 }
 
 b,
 strong {
+    font-weight: inherit;
     font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
 }
 
 dfn {
@@ -103,6 +90,7 @@ sub,
 sup {
     font-size: 75%;
     line-height: 0;
+    position: relative;
     vertical-align: baseline
 }
 
@@ -115,7 +103,6 @@ sup {
 }
 
 audio,
-canvas,
 video {
     display: inline-block
 }
@@ -154,25 +141,25 @@ select {
     text-transform: none
 }
 
-[type=reset],
-[type=submit],
 button,
-html [type=button] {
+html [type="button"],
+[type="reset"],
+[type="submit"] {
     -webkit-appearance: button
 }
 
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner,
-button::-moz-focus-inner {
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
     border-style: none;
     padding: 0
 }
 
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring,
-button:-moz-focusring {
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText
 }
 
@@ -183,9 +170,11 @@ fieldset {
 }
 
 legend {
+    box-sizing: border-box;
     color: inherit;
     display: table;
     max-width: 100%;
+    padding: 0;
     white-space: normal
 }
 
@@ -198,25 +187,24 @@ textarea {
     overflow: auto
 }
 
-[type=checkbox],
-[type=radio],
-legend {
+[type="checkbox"],
+[type="radio"] {
     box-sizing: border-box;
     padding: 0
 }
 
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
     height: auto
 }
 
-[type=search] {
+[type="search"] {
     -webkit-appearance: textfield;
     outline-offset: -2px
 }
 
-[type=search]::-webkit-search-cancel-button,
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none
 }
 
@@ -225,13 +213,44 @@ legend {
     font: inherit
 }
 
+details,
+menu {
+    display: block
+}
+
 summary {
     display: list-item
 }
 
-[hidden],
+canvas {
+    display: inline-block
+}
+
 template {
     display: none
+}
+
+[hidden] {
+    display: none
+}
+
+html {
+    height: 100%
+}
+
+body {
+    position: relative;
+    height: 100%;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #222;
+    background-color: #fff
+}
+
+a {
+    text-decoration: none
 }
 
 a[href] {
@@ -266,7 +285,7 @@ a[href] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(50, 50, 50, .6);
+    background-color: rgba(50, 50, 50, 0.6);
     z-index: 1;
     display: none
 }
@@ -290,21 +309,21 @@ a[href] {
     }
     20% {
         opacity: .2;
-        transform: scale(.2)
+        transform: scale(0.2)
     }
     40% {
         opacity: .4;
-        transform: scale(.4)
+        transform: scale(0.4)
     }
     60% {
         opacity: .6;
-        transform: scale(.6)
+        transform: scale(0.6)
     }
     80% {
         opacity: .8;
-        transform: scale(.8)
+        transform: scale(0.8)
     }
-    to {
+    100% {
         opacity: 1;
         transform: scale(1)
     }
@@ -312,54 +331,52 @@ a[href] {
 
 @font-face {
     font-family: "Open Sans";
-    src: local("../fonts/Open Sans Regular"), local("OpenSans-Regular"), url(../fonts/OpenSans-Regular.woff2) format("woff2"), url(../fonts/OpenSans-Regular.woff) format("woff");
+    src: local("../fonts/Open Sans Regular"), local(OpenSans-Regular), url(../fonts/OpenSans-Regular.woff2) format("woff2"), url(../fonts/OpenSans-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: "PT Sans";
-    src: local("PT Sans Bold"), local("PTSans-Bold"), url(../fonts/PTSans-Bold.woff2) format("woff2"), url(../fonts/PTSans-Bold.woff) format("woff");
+    src: local("PT Sans Bold"), local(PTSans-Bold), url(../fonts/PTSans-Bold.woff2) format("woff2"), url(../fonts/PTSans-Bold.woff) format("woff");
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: "PT Sans";
-    src: local("PT Sans"), local("PTSans-Regular"), url(../fonts/PTSans-Regular.woff2) format("woff2"), url(../fonts/PTSans-Regular.woff) format("woff");
+    src: local("PT Sans"), local(PTSans-Regular), url(../fonts/PTSans-Regular.woff2) format("woff2"), url(../fonts/PTSans-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: "Open Sans";
-    src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/OpenSans-Bold.woff2) format("woff2"), url(../fonts/OpenSans-Bold.woff) format("woff");
+    src: local("Open Sans Bold"), local(OpenSans-Bold), url(../fonts/OpenSans-Bold.woff2) format("woff2"), url(../fonts/OpenSans-Bold.woff) format("woff");
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: "Myriad Pro";
-    src: local("MyriadPro-Regular"), url(../fonts/MyriadPro-Regular.woff2) format("woff2"), url(../fonts/MyriadPro-Regular.woff) format("woff");
+    src: local(MyriadPro-Regular), url(../fonts/MyriadPro-Regular.woff2) format("woff2"), url(../fonts/MyriadPro-Regular.woff) format("woff");
     font-weight: 400;
     font-style: normal
 }
 
-.logo__company-name,
-.logo__description {
+.logo__company-name {
     font-family: "Myriad Pro", "Arial", sans-serif;
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 700;
     color: #777
 }
 
-.logo__company-name {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px
-}
-
 .logo__description {
+    font-family: "Myriad Pro", "Arial", sans-serif;
     font-size: 18px;
-    line-height: 32px
+    line-height: 32px;
+    color: #777
 }
 
 .logo__link {
@@ -387,10 +404,7 @@ a[href] {
     color: #767676
 }
 
-.breadcrumbs__item a[href]:hover,
-.catalog__pagination-item a[href]:hover,
-.header__contacts-list a:hover,
-.header__feedback:hover {
+.header__contacts-list a:hover {
     color: #444
 }
 
@@ -402,6 +416,10 @@ a[href] {
     color: #767676;
     letter-spacing: .5px;
     border-bottom: 2px dashed #767676
+}
+
+.header__feedback:hover {
+    color: #444
 }
 
 .header__top {
@@ -426,7 +444,10 @@ a[href] {
 .main-nav__list {
     box-sizing: border-box;
     list-style: none;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -474,8 +495,10 @@ a[href] {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    margin: 0;
+    padding: 0;
     padding: 6px 0;
-    margin: 0 0 13px
+    margin-bottom: 13px
 }
 
 .breadcrumbs__item {
@@ -494,6 +517,10 @@ a[href] {
     line-height: 16px;
     font-weight: 400;
     color: #767676
+}
+
+.breadcrumbs__item a[href]:hover {
+    color: #444
 }
 
 .breadcrumbs__item a[href]::before {
@@ -549,7 +576,7 @@ a[href] {
 }
 
 .slider__btn:hover {
-    box-shadow: 5px 0 5px rgba(119, 119, 119, .5)
+    box-shadow: 5px 0 5px rgba(119, 119, 119, 0.5)
 }
 
 .catalog__blocks {
@@ -583,16 +610,16 @@ a[href] {
     flex-direction: column;
     align-items: flex-start;
     list-style: none;
+    margin: 0;
     padding: 0;
-    margin: 0 0 98px
+    margin-bottom: 98px
 }
 
 .catalog__list-item {
     margin-bottom: 8px
 }
 
-.catalog__list-item a,
-.catalog__price-text {
+.catalog__list-item a {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18.5px;
     line-height: 19px;
@@ -605,7 +632,9 @@ a[href] {
 }
 
 .catalog__price-text {
-    margin: 0 0 0 13px;
+    margin: 0;
+    margin-left: 13px;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 30px;
     line-height: 20px;
     font-weight: 700;
@@ -613,21 +642,27 @@ a[href] {
     letter-spacing: .5px
 }
 
-.catalog__pagination-list,
 .catalog__products-list {
     list-style: none;
+    margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 0 0 10px
+    margin-bottom: 10px
 }
 
 .catalog__pagination-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-self: center;
     align-items: baseline;
-    margin: 0 0 61px;
+    margin-bottom: 61px;
     max-width: 300px;
     min-width: 176px
 }
@@ -639,8 +674,7 @@ a[href] {
     font-weight: 400
 }
 
-.catalog__pagination-item--active,
-.product__price:hover::after {
+.catalog__pagination-item--active {
     transform: scale(1.3)
 }
 
@@ -648,12 +682,17 @@ a[href] {
     color: #767676
 }
 
+.catalog__pagination-item a[href]:hover {
+    color: #444
+}
+
 .catalog__pagination-item--active a {
     color: #000
 }
 
 .catalog__products-item {
-    padding: 20px 20px 9px;
+    padding: 20px;
+    padding-bottom: 9px;
     width: 210px;
     background-color: #dcdcdc;
     margin-right: 15px;
@@ -697,6 +736,7 @@ a[href] {
 
 .category__item a {
     display: block;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14.3px;
     line-height: 18px;
     font-weight: 400
@@ -723,23 +763,22 @@ a[href] {
     border-radius: 50%
 }
 
-.category__item a,
-.product__name,
-.product__price {
-    font-family: "PT Sans", "Arial", sans-serif
-}
-
 .product__name {
-    margin: 12px 0 44px;
-    letter-spacing: .5px;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 44px;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
+    text-align: center;
     line-height: 19px;
     font-weight: 400;
+    letter-spacing: .5px;
     color: #767676
 }
 
 .product__price {
     margin-bottom: 0;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 28px;
     line-height: 42px;
     font-weight: 700;
@@ -755,6 +794,10 @@ a[href] {
     bottom: 8px;
     right: 16px;
     background: url(../img/cart.png)
+}
+
+.product__price:hover::after {
+    transform: scale(1.3)
 }
 
 .product:hover {
@@ -796,8 +839,7 @@ a[href] {
     letter-spacing: .3px
 }
 
-.footer__email a:hover,
-.footer__nav-item a {
+.footer__email a:hover {
     text-decoration: underline
 }
 
@@ -809,6 +851,7 @@ a[href] {
     display: block;
     color: #fff;
     margin-right: auto;
+    text-decoration: underline;
     letter-spacing: .3px
 }
 
@@ -829,10 +872,11 @@ a[href] {
 .features {
     list-style: none;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     border-top: 1px solid #767676;
-    padding: 24px 0 0
+    padding-top: 24px
 }
 
 .features__item {
@@ -870,8 +914,8 @@ a[href] {
     background-color: #777
 }
 
-.modal__close::after,
-.modal__close::before {
+.modal__close::before,
+.modal__close::after {
     display: block;
     position: absolute;
     content: "";
@@ -895,23 +939,22 @@ a[href] {
     flex-direction: column
 }
 
-.modal__label,
 .modal__title {
+    margin: 0;
+    margin-bottom: 21px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
     text-align: center;
     color: #535353
 }
 
-.modal__title {
-    margin: 0 0 21px;
-    font-size: 24px;
-    line-height: 36px;
-    font-weight: 700;
-    text-transform: uppercase
-}
-
 .modal__label {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    text-align: center;
+    color: #535353
 }
 
 .modal__message {
@@ -927,9 +970,9 @@ a[href] {
 }
 
 .modal__input:invalid {
-    box-shadow: inset 0 0 20px rgba(228, 106, 106, .75);
+    box-shadow: inset 0 0 20px rgba(228, 106, 106, 0.75);
     border-width: 1px;
-    border-color: rgba(228, 106, 106, .75)
+    border-color: rgba(228, 106, 106, 0.75)
 }
 
 .modal__submit {
@@ -951,4 +994,18 @@ a[href] {
     display: flex;
     animation: fade .5s ease-in-out;
     animation-fill-mode: both
+}
+
+.block {
+    display: block;
+    margin-bottom: 20px
+}
+
+.block:first-child {
+    text-align: center;
+    line-height: 55px
+}
+
+span:not(.block) {
+    text-align: center
 }

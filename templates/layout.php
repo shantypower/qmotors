@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="lib/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css" />
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
 <header class="header">
