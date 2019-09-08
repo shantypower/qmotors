@@ -1,6 +1,7 @@
 <?php
 require_once ('core/functions.php');
 require_once ('core/docx_reader.php');
+require_once ('core/data.php');
 
 $page_content = '';
 $id = $_GET['key'];
